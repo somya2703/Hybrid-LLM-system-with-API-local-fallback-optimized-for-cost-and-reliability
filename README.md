@@ -21,6 +21,11 @@ A production-style **Retrieval-Augmented Generation (RAG)** system that answers 
 *  Automatic vector DB creation on startup
 
 ---
+# Streamlit Preview
+
+![streamlit_preview](./streamlit.png)
+
+---
 
 #  Architecture
 
