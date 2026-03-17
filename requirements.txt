@@ -1,0 +1,36 @@
+# Core backend
+fastapi
+uvicorn
+
+# Frontend
+streamlit
+
+# LangChain ecosystem
+langchain>=0.1.30
+langchain-community==0.4.1
+langchain-text-splitters==1.1.1
+langchain-openai
+#langchain-classic
+
+# OpenAI (primary LLM)
+openai
+
+# Local LLM (fallback)
+llama-cpp-python
+
+# Embeddings
+sentence-transformers
+
+# Vector DB
+faiss-cpu
+
+# Document loading
+pypdf
+
+# Utilities
+numpy
+scikit-learn
+tiktoken
+python-dotenv
+fpdf2
+torch
