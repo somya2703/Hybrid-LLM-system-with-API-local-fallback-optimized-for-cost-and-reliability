@@ -1,28 +1,28 @@
-# 🧠 Training Knowledge Assistant (RAG + Fallback LLM)
+# Training Knowledge Assistant (RAG + Fallback LLM)
 
 A production-style **Retrieval-Augmented Generation (RAG)** system that answers questions from custom documents using:
 
-* 🔥 **OpenAI (primary LLM)** for high-quality responses
-* 🧠 **Local LLM (TinyLlama via llama.cpp)** as a fallback when API quota is unavailable
-* ⚡ Fully containerized with Docker
-* 💻 CPU-friendly deployment
+*  **OpenAI (primary LLM)** for high-quality responses
+*  **Local LLM (TinyLlama via llama.cpp)** as a fallback when API quota is unavailable
+*  Fully containerized with Docker
+*  CPU friendly deployment
 
 ---
 
-# 🚀 Key Features
+#  Key Features
 
-* ✅ RAG pipeline using **FAISS vector database**
-* ✅ OpenAI-powered responses (primary)
-* ✅ Automatic fallback to **local LLM (TinyLlama GGUF)**
-* ✅ Works even with **zero API credits**
-* ✅ Streamlit chat interface
-* ✅ FastAPI backend (production-ready structure)
-* ✅ Dockerized multi-service architecture
-* ✅ Automatic vector DB creation on startup
+*  RAG pipeline using **FAISS vector database**
+*  OpenAI-powered responses (primary)
+*  Automatic fallback to **local LLM (TinyLlama GGUF)**
+*  Works even with **zero API credits**
+*  Streamlit chat interface
+*  FastAPI backend (production ready structure)
+*  Dockerized multi-service architecture
+*  Automatic vector DB creation on startup
 
 ---
 
-# 🏗️ Architecture
+#  Architecture
 
 ```
 User (Streamlit UI)
@@ -38,7 +38,7 @@ LLM Decision Layer
 
 ---
 
-# 🧰 Tech Stack
+#  Tech Stack
 
 ### Backend
 
@@ -72,17 +72,17 @@ LLM Decision Layer
    * Sent to LLM for answer generation
 4. System tries:
 
-   * ✅ OpenAI first
-   * ⚠️ Falls back to local LLM if:
+   *  OpenAI first
+   *  Falls back to local LLM if:
 
      * API quota exceeded
      * API unavailable
 
 ---
 
-# 🧪 Running the Project
+#  Running the Project
 
-## 🔹 Option 1 — Docker (Recommended)
+## Option 1 — Docker (Recommended)
 
 ### 1. Build
 
@@ -100,12 +100,12 @@ make up
 
 ### Access apps:
 
-* 🌐 Backend API Docs: http://localhost:8000/docs
-* 💬 Streamlit UI: http://localhost:8501
+*  Backend API Docs: http://localhost:8000/docs
+*  Streamlit UI: http://localhost:8501
 
 ---
 
-## 🔹 Option 2 — Local Run
+##  Option 2 — Local Run
 
 ### Backend
 
@@ -121,9 +121,9 @@ streamlit run app/streamlit_app.py
 
 ---
 
-# 📂 Data Setup
+#  Data Setup
 
-Place your PDFs in:
+Place your PDFs in (you can also use the dummy file generator in /scripts to generate files for testing purpose):
 
 ```
 dummy_data/
@@ -133,7 +133,7 @@ Vector DB is automatically created on startup.
 
 ---
 
-# 🧠 Local LLM Setup
+#  Local LLM Setup
 
 1. Download GGUF model (e.g., TinyLlama)
 2. Place inside:
@@ -150,50 +150,33 @@ models/tinyllama.gguf
 
 ---
 
-# ⚡ Fallback Behavior
+#  Fallback Behavior
 
 | Scenario         | Model Used   |
 | ---------------- | ------------ |
-| OpenAI available | ✅ OpenAI     |
-| No API quota     | ⚠️ Local LLM |
-| No internet      | ⚠️ Local LLM |
+| OpenAI available |  OpenAI     |
+| No API quota     |  Local LLM |
+| No internet      |  Local LLM |
 
 ---
-
-# 🏭 Industrial Applications
 
 This system can be adapted for:
 
-* 📄 Internal company knowledge assistants
-* 🏭 Factory documentation querying
-* 🤖 Robotics troubleshooting assistants
-* 📊 Engineering knowledge retrieval systems
-* 📚 Training & onboarding copilots
+*  Internal company knowledge assistants
+*  Factory documentation querying
+*  Robotics troubleshooting assistants
+*  Engineering knowledge retrieval systems
+*  Training & onboarding copilots
 
 ---
-
-# 🎯 Why This Project Matters
 
 This project demonstrates:
 
 * End-to-end ML system design
 * LLM integration with fallback strategies
-* Production-ready backend architecture
+* Production ready backend architecture
 * Containerized deployment
-* Cost-aware AI system design (API + local hybrid)
+* Cost aware AI system design (API + local hybrid)
 
 ---
 
-# 🔮 Future Improvements
-
-* GPU acceleration (llama.cpp CUDA)
-* Response caching
-* Multi-user support
-* Advanced retrieval (hybrid search)
-* Kubernetes deployment
-
----
-
-# 👩‍💻 Author
-
-Built as part of a hands-on system design + AI engineering project.
