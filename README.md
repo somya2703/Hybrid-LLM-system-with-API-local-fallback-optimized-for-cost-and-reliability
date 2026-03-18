@@ -80,8 +80,8 @@ LLM Decision Layer
    *  OpenAI first
    *  Falls back to local LLM if:
 
-     * API quota exceeded
-     * API unavailable
+             * API quota exceeded
+             * API unavailable
 
 ---
 
